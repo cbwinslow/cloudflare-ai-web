@@ -96,6 +96,15 @@ const AppSidebar = () => {
         <SidebarHeader>
           <SidebarMenu>
             <SidebarMenuItem>
+              <SidebarMenuButton asChild isActive={pathname === "/chat"}>
+                <Link href="/chat">
+                  <Plus />
+                  Chat
+                  <LoadingIndicator className="ml-auto" />
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
               <SidebarMenuButton asChild isActive={pathname === "/image"}>
                 <Link href="/image">
                   <ImageIcon />
@@ -174,7 +183,7 @@ const AppSidebar = () => {
                 <Cog />
               </Button>
 
-              <Link href="/" className="ml-auto">
+              <Link href="/chat" className="ml-auto">
                 <Button variant="ghost">
                   New Chat
                   <Plus />
